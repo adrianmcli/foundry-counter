@@ -12,6 +12,15 @@ Just a simple project for me to practice the basic workflows of Foundry developm
    ```bash
    forge script script/Counter.s.sol --broadcast --rpc-url http://localhost:8545
    ```
+4. (optional) Check that the contract is there by doing a `cast call`:
+   ```bash
+   cast call <contract_deployed_address> "number()(uint256)" --rpc-url http://localhost:8545
+   ```
+
+5. (optional) Send a transaction to the contract by doing a `cast send`:
+   ```bash
+   cast send <contract_deployed_address> "increment()" --rpc-url http://localhost:8545 --private-key <private_key_from_anvil>
+   ```
 
 ## Usage
 
