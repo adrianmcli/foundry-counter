@@ -1,17 +1,17 @@
-## Foundry
+## Foundry Counter Example
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Just a simple project for me to practice the basic workflows of Foundry development.
 
-Foundry consists of:
+## Manual Testing with Anvil
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. Start an Anvil instance (on another terminal) by running `anvil`. You should get a bunch of public keys and private keys as well as the text "Listening on 127.0.0.1:8545".
 
-## Documentation
+2. Make a `.env` file at project root and place one of Anvil's provided private keys (e.g.`PRIVATE_KEY=0x1234...`).
 
-https://book.getfoundry.sh/
+3. Run the following to deploy:
+   ```bash
+   forge script script/Counter.s.sol --broadcast --rpc-url http://localhost:8545
+   ```
 
 ## Usage
 
